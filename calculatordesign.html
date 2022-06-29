@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script type="text/javascript">
+	
+
+	var f_val ,s_val, sign;	
+
+	function no(n)
+	{
+		
+			document.getElementById('display').value = document.getElementById('display').value+n; 
+	
+
+		if( n == 'c')
+		{
+			document.getElementById('display').value="";
+		}			
+	}
+
+
+
+		function action(s)
+		{
+			f_val=document.getElementById('display').value;
+				document.getElementById('display').value="";
+
+				sign=s;
+
+		
+
+
+		}
+
+		function erase()
+		{
+			var x = document.getElementById('display').value;
+			var y = x.substr(0,(x.length)-1);
+			document.getElementById('display').value = y;
+		
+		}
+
+
+		function ans()
+		{
+			s_val = document.getElementById('display').value;
+			if( sign =='+')
+			{
+
+					var ans = parseInt(f_val)+parseInt(s_val);
+			}
+			if( sign =='-')
+			{
+
+					var ans = parseInt(f_val)-parseInt(s_val);
+			}
+			if( sign =='*')
+			{
+
+					var ans = parseInt(f_val)*parseInt(s_val);
+			}
+			if( sign =='/')
+			{
+
+					var ans = parseInt(f_val)/parseInt(s_val);
+			}	
+	
+	
+			document.getElementById('display').value = ans;
+		}
+
+
+		
+
+
+                               
+
+
+	</script>	
+
+
+	<style type="text/css">
+
+
+
+		h1
+		{
+			text-align: center;
+			background-color:navajowhite;
+			text-decoration: underline;
+			padding: 10px;
+		}
+
+		
+		table
+		{
+
+			border: 5px solid black;
+			background-color: pink;
+			margin-left: 250px;
+			margin-top: 100px;
+		}
+
+		input
+		{
+			width: 40px;
+			background-color:pink;
+			color:black;
+
+		}
+
+		
+
+		.text
+		{
+			width: 85%;
+			background-color: white;
+
+		}
+		.text:hover
+		{
+			
+			background-color: white;
+			border-radius: 0px;
+		}
+
+		.c2
+		{
+			width: 50px;
+			margin-left: 40px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1> Calculator Program in JavaScript </h1>
+
+	<table>
+		
+	<tr>
+		
+
+		<td colspan="4"><input type="text" name="" class="text" id="display"></td>
+
+	</tr>	
+	<tr>
+		
+
+		<td><input type="button" name="" value="7" onclick="no(7)"></td>
+		<td><input type="button" name="" value="8" onclick="no(8)"></td>
+		<td><input type="button" name="" value="9" onclick="no(9)"></td>
+		<td><input type="button" name="" value="+" onclick=" action('+')"></td>
+
+	</tr>
+	<tr>
+		
+		<td><input type="button" name="" value="4" onclick="no(4)"></td>
+		<td><input type="button" name="" value="5" onclick="no(5)"></td>
+		<td><input type="button" name="" value="6" onclick="no(6)"></td>
+		<td><input type="button" name="" value="-" onclick=" action('-')"></td>
+
+	</tr>
+	<tr>
+		
+		<td><input type="button" name="" value="1" onclick="no(1)"></td>
+		<td><input type="button" name="" value="2" onclick="no(2)"></td>
+		<td><input type="button" name="" value="3" onclick="no(3)"></td>
+		<td><input type="button" name="" value="*" onclick=" action('*')"></td>
+
+	</tr>
+	<tr>
+		
+		<td><input type="button" name="" value="0"></td>
+		<td><input type="button" name="" value="C" onclick="no('c')"></td>
+		<td><input type="button" name="" value="=" onclick="ans()"></td>
+		<td><input type="button" name="" value="/" onclick=" action('/')"></td>
+
+	</tr>	
+
+	<tr>
+		
+		<td colspan="2"><input type="button" name="" value="clear" onclick="erase()" class="c2"></td>
+	</tr>		
+
+
+
+	</table>
+
+</body>
+</html>
